@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.9.12 on win32)" generated="2025-02-14T21:24:15.708445" rpa="false" schemaversion="5">
+<suite id="s1" name="PlayListScenarios" source="C:\Users\asus\Downloads\ITAMMEN\ITAMMEN\TestCases\PlayListScenarios.robot">
+<kw name="Begin Web Test" owner="CommonKeyword" type="SETUP">
+<kw name="Configure Test Timing" owner="CommonKeyword">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${COMMON_IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-02-14T21:24:16.177072" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${COMMON_TIME_OUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-02-14T21:24:16.177072" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Page Load Timeout" owner="SeleniumLibrary">
+<arg>${COMMON_LOAD_TIME_OUT}</arg>
+<doc>Sets the page load timeout value used by Selenium.</doc>
+<status status="PASS" start="2025-02-14T21:24:16.177072" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${COMMON_SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-14T21:24:16.177072" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-14T21:24:16.172640" elapsed="0.004432"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyword">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-14T21:24:16.177072" level="INFO">Opening browser 'chrome' to base url 'https://open.spotify.com'.</msg>
+<msg time="2025-02-14T21:24:17.809310" level="WARN">The chromedriver version (131.0.6778.204) detected in PATH at C:\Users\asus\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (132.0.6834.196); currently, chromedriver 132.0.6834.159 is recommended for chrome 132.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>@{KWARGS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-14T21:24:16.177072" elapsed="9.283062"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-14T21:24:16.177072" elapsed="9.283062"/>
+</kw>
+<arg>OPEN BROWSER</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>${alias}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2025-02-14T21:24:16.177072" elapsed="9.284214"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyword">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<arg>@{KWARGS}</arg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-14T21:24:25.465312" elapsed="0.855239"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-14T21:24:25.463298" elapsed="0.859645"/>
+</kw>
+<arg>MAXIMIZE BROWSER WINDOW</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2025-02-14T21:24:25.461286" elapsed="0.862423"/>
+</kw>
+<status status="PASS" start="2025-02-14T21:24:16.172640" elapsed="10.151069"/>
+</kw>
+<test id="s1-t1" name="Verify that the user can search for a song" line="11">
+<kw name="Play List Creation" owner="PlayList">
+<kw name="Login with valid mail and password" owner="Login">
+<kw name="click on login button" owner="LoginKeyWords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-14T21:24:26.356830" level="INFO">Clicking element '//button[@data-testid="login-button"]'.</msg>
+<arg>${LOGIN-BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T21:24:26.347051" elapsed="1.935091"/>
+</kw>
+<status status="PASS" start="2025-02-14T21:24:26.343375" elapsed="1.938767"/>
+</kw>
+<kw name="Enter Valid Mail" owner="LoginKeyWords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${EMAIL_FIELD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-14T21:24:28.286184" elapsed="3.990630"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T21:24:32.279691" level="INFO">Typing text 'datakhriana@gmail.com' into text field '//input[@id="login-username"]'.</msg>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T21:24:32.276814" elapsed="0.918748"/>
+</kw>
+<status status="PASS" start="2025-02-14T21:24:28.284167" elapsed="4.911395"/>
+</kw>
+<kw name="Enter Valid Password" owner="LoginKeyWords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-14T21:24:33.195562" elapsed="0.538220"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T21:24:33.735793" level="INFO">Typing text 'Dody562005' into text field '//input[@id="login-password"]'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T21:24:33.733782" elapsed="0.739161"/>
+</kw>
+<status status="PASS" start="2025-02-14T21:24:33.195562" elapsed="1.277381"/>
+</kw>
+<kw name="Login" owner="LoginKeyWords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${SUBMIT_LOGIN}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-14T21:24:34.476996" elapsed="0.546528"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-14T21:24:35.025972" level="INFO">Clicking element '//button[@id="login-button"]'.</msg>
+<arg>${SUBMIT_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T21:24:35.024776" elapsed="0.411141"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T21:24:40.441336" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T21:24:35.437369" elapsed="5.004376"/>
+</kw>
+<status status="PASS" start="2025-02-14T21:24:34.474979" elapsed="5.975789"/>
+</kw>
+<status status="PASS" start="2025-02-14T21:24:26.339984" elapsed="14.110784"/>
+</kw>
+<kw name="Search For A Song" owner="PlayListKeyWords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${SEARCH_BAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-14T21:24:40.456828" elapsed="1.313650"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T21:24:41.772889" level="INFO">Typing text 'Bang Bang' into text field '//input[@placeholder="What do you want to play?"]'.</msg>
+<arg>${SEARCH_BAR}</arg>
+<arg>${SEARCH_KEYWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T21:24:41.771912" elapsed="0.727160"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-14T21:24:42.500442" elapsed="0.697902"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-14T21:24:43.199519" level="INFO">Clicking element '//button[@data-encore-id="buttonTertiary"]'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T21:24:43.199003" elapsed="0.850840"/>
+</kw>
+<status status="PASS" start="2025-02-14T21:24:40.452787" elapsed="3.597056"/>
+</kw>
+<kw name="Create a Play List" owner="PlayListKeyWords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<msg time="2025-02-14T21:25:14.901667" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-97.png"&gt;&lt;img src="selenium-screenshot-97.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-14T21:25:14.901667" level="FAIL">Element with locator '//div[@class="FTiXRW7kAldHmLaxVQ2N iYP0xuQiJCgi7gx1jUPJ"]' not found.</msg>
+<arg>${SIDE_LIST}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="FAIL" start="2025-02-14T21:24:44.054921" elapsed="30.852065">Element with locator '//div[@class="FTiXRW7kAldHmLaxVQ2N iYP0xuQiJCgi7gx1jUPJ"]' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SIDE_LIST}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.906986" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${ADD_LIST}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.910765" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${ADD_LIST}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.910765" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${CRAETE_LIST}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.910765" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CRAETE_LIST}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.910765" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${SONG_SEARCH}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.912790" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SONG_SEARCH}</arg>
+<arg>${SEARCH_KEYWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.912790" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${ADD_SONG}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.912790" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${ADD_SONG}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.912790" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${PLAY_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.912790" elapsed="0.002019"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${PLAY_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-14T21:25:14.914809" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-02-14T21:24:44.054921" elapsed="30.861995">Element with locator '//div[@class="FTiXRW7kAldHmLaxVQ2N iYP0xuQiJCgi7gx1jUPJ"]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-02-14T21:24:26.336930" elapsed="48.579986">Element with locator '//div[@class="FTiXRW7kAldHmLaxVQ2N iYP0xuQiJCgi7gx1jUPJ"]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-02-14T21:24:26.326784" elapsed="48.590132">Element with locator '//div[@class="FTiXRW7kAldHmLaxVQ2N iYP0xuQiJCgi7gx1jUPJ"]' not found.</status>
+</test>
+<kw name="End Web Test" owner="CommonKeyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-14T21:25:14.924867" elapsed="3.916309"/>
+</kw>
+<status status="PASS" start="2025-02-14T21:25:14.922849" elapsed="3.918327"/>
+</kw>
+<status status="FAIL" start="2025-02-14T21:24:15.708445" elapsed="63.132731"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="PlayListScenarios">PlayListScenarios</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-14T21:24:17.809310" level="WARN">The chromedriver version (131.0.6778.204) detected in PATH at C:\Users\asus\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (132.0.6834.196); currently, chromedriver 132.0.6834.159 is recommended for chrome 132.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
