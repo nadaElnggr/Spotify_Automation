@@ -8,6 +8,6 @@ Suite Teardown          CommonKeyword.End Web Test
 
 *** Test Cases ***
 
-1st Scenarion
+Verify that the user can login with valid mail and password
     Login with valid mail and password
 
